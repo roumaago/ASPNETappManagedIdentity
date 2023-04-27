@@ -42,7 +42,7 @@ namespace demo.Pages
                 }
 
                 KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-                var secret = await keyVaultClient.GetSecretAsync("https://[MODIFY_THIS_YOUR_KEY_VAULT_URL]/secrets/[MODIFY_THIS_SECRET_NAME]")
+                var secret = await keyVaultClient.GetSecretAsync("https://[YOUR_KEY_VAULT_URL]]secrets/[SECRET_NAME]")
                         .ConfigureAwait(false);
                 SecretValue = secret.Value;
             }
